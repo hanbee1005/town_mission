@@ -32,3 +32,6 @@ dependencies {
 ```
 - SwaggerConfig.java 파일 추가 (설정 정보 변경)
 - 서버 실행 후 http://localhost:9090/app/swagger-ui.html 접속
+
+## Error
+- @DataJpaTest DataSource 설정 오류 (https://charliezip.tistory.com/21)
