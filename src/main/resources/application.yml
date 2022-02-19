@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: townmission-api
+  profiles:
+    active: local
+  jpa:
+    show-sql: true
+
+server:
+  servlet:
+    context-path: /app
+    encoding:
+      charset: UTF-8
+      enabled: true
+  port: 9090
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/townmission_db
+    username: testuser
+    password: testuser123
+
+    jpa:
+      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+      hibernate:
+        ddl-auto: create
