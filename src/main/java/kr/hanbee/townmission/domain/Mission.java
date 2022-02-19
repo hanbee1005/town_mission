@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "missions")
-public class Mission {
+public class Mission extends BaseEntity {
 
     @Id @GeneratedValue
     private Long id;
