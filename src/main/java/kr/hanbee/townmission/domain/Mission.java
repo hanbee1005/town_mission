@@ -3,15 +3,15 @@ package kr.hanbee.townmission.domain;
 import kr.hanbee.townmission.constant.SettlementType;
 import kr.hanbee.townmission.constant.StatusType;
 import kr.hanbee.townmission.constant.YesOrNoType;
+import kr.hanbee.townmission.dto.MissionCreateRequest;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "missions")
+@NoArgsConstructor
 public class Mission extends BaseEntity {
 
     @Id @GeneratedValue
@@ -26,4 +26,16 @@ public class Mission extends BaseEntity {
     private Integer pay;
     private SettlementType settlementType;
     private String description;
+
+    public Mission(MissionCreateRequest request) {
+        this.status = request.getStatus();
+        this.startAt = request.getStartAt();
+        this.endAt = request.getEndAt();
+        this.adjustedYn = request.getAdjustedYn();
+        this.postalCode = request.getPostalCode();
+        this.contactYn = request.getContactYn();
+        this.pay = request.getPay();
+        this.settlementType = request.getSettlementType();
+        this.description = request.getDescription();
+    }
 }

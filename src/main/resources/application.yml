@@ -22,11 +22,11 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/townmission_db
+    url: jdbc:mysql://localhost:3306/townmission_db?serverTimezone=UTC&characterEncoding=UTF-8
     username: testuser
     password: testuser123
 
-    jpa:
-      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-      hibernate:
-        ddl-auto: create
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
