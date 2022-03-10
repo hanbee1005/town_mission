@@ -21,12 +21,20 @@ spring:
       on-profile: local
 
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/townmission_db?serverTimezone=UTC&characterEncoding=UTF-8
-    username: testuser
-    password: testuser123
+    hikari:
+      minimum-idle: 50
+      maximum-pool-size: 50
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       ddl-auto: update
+
+resources:
+  root: file:/etc/secret/local
+  driver-class: com.mysql.cj.jdbc.Driver
+  path:
+    endpoint: /ENDPOINT
+    username: /USERNAME
+    password: /PASSWORD
+    redis-endpoint: /REDIS_ENDPOINT
