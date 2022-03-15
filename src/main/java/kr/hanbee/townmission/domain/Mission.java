@@ -4,14 +4,16 @@ import kr.hanbee.townmission.constant.SettlementType;
 import kr.hanbee.townmission.constant.StatusType;
 import kr.hanbee.townmission.constant.YesOrNoType;
 import kr.hanbee.townmission.dto.MissionCreateRequest;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Getter
+@NoArgsConstructor
 @Entity
 @Table(name = "missions")
-@NoArgsConstructor
 public class Mission extends BaseEntity {
 
     @Id @GeneratedValue
