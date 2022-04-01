@@ -23,7 +23,6 @@ public class Mission extends BaseEntity {
     private LocalDateTime startAt;
     private LocalDateTime endAt;
     private YesOrNoType adjustedYn;
-    private String postalCode;
     private YesOrNoType contactYn;
     private Integer pay;
     private SettlementType settlementType;
@@ -34,7 +33,6 @@ public class Mission extends BaseEntity {
         this.startAt = request.getStartAt();
         this.endAt = request.getEndAt();
         this.adjustedYn = request.getAdjustedYn();
-        this.postalCode = request.getPostalCode();
         this.contactYn = request.getContactYn();
         this.pay = request.getPay();
         this.settlementType = request.getSettlementType();

@@ -11,18 +11,19 @@ import java.time.LocalDateTime;
 @Data
 @Builder
 public class MissionCreateRequest {
-    // about category
-
     // about mission
     private StatusType status;
     private LocalDateTime startAt;
     private LocalDateTime endAt;
     private YesOrNoType adjustedYn;
-    private String postalCode;
     private YesOrNoType contactYn;
     private Integer pay;
     private SettlementType settlementType;
     private String description;
+
+    // about category
+
+    // about address
 
     // about attachment
 

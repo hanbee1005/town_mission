@@ -47,7 +47,6 @@ class MissionRepositoryTest {
                 .startAt(LocalDateTime.parse(startAt, formatter))
                 .endAt(LocalDateTime.parse(endAt, formatter))
                 .adjustedYn(YesOrNoType.Y)
-                .postalCode("12345")
                 .contactYn(YesOrNoType.Y)
                 .pay(10000)
                 .settlementType(SettlementType.ON_SITE)

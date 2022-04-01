@@ -29,6 +29,8 @@ public class MissionService {
 
         // 미션 카테고리 등록
 
+        // 미션 주소 등록
+
         // 미션 첨부파일 등록
 
         // 미션 질문 등록

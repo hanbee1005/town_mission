@@ -22,7 +22,7 @@ public abstract class BaseEntity {
     private LocalDateTime createdAt;
 
     @LastModifiedDate
-    private LocalDateTime modifiedAt;
+    private LocalDateTime lastModifiedAt;
 
     // TODO: 실제 사용자가 들어갈 수 있도록 추가 기능 구현 필요
     @CreatedBy

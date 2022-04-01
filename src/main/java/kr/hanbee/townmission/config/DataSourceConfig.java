@@ -12,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 
 @Configuration
 public class DataSourceConfig {
-    private static final String MYSQL_FORMAT = "jdbc:mysql://%s/gigdb?useMysqlMetadata=true&createDatabaseIfNotExist=true&useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC";
+    private static final String MYSQL_FORMAT = "jdbc:mysql://%s/testdb?useMysqlMetadata=true&createDatabaseIfNotExist=true&useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC";
 
     @Value("${resources.root}${resources.path.endpoint}")
     private Resource endpoint;
