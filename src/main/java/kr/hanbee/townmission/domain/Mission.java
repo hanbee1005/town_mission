@@ -3,7 +3,7 @@ package kr.hanbee.townmission.domain;
 import kr.hanbee.townmission.constant.SettlementType;
 import kr.hanbee.townmission.constant.StatusType;
 import kr.hanbee.townmission.constant.YesOrNoType;
-import kr.hanbee.townmission.dto.mission.MissionCreateRequest;
+import kr.hanbee.townmission.dto.mission.request.MissionCreateRequest;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

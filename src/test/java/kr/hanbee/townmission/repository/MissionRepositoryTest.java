@@ -5,7 +5,7 @@ import kr.hanbee.townmission.constant.SettlementType;
 import kr.hanbee.townmission.constant.StatusType;
 import kr.hanbee.townmission.constant.YesOrNoType;
 import kr.hanbee.townmission.domain.Mission;
-import kr.hanbee.townmission.dto.mission.MissionCreateRequest;
+import kr.hanbee.townmission.dto.mission.request.MissionCreateRequest;
 import kr.hanbee.townmission.repository.mission.MissionRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
