@@ -2,7 +2,7 @@ package kr.hanbee.townmission.domain;
 
 import kr.hanbee.townmission.constant.MissionCategoryType;
 import kr.hanbee.townmission.constant.MissionParentCategoryType;
-import kr.hanbee.townmission.dto.MissionCategoryRequest;
+import kr.hanbee.townmission.dto.mission.MissionCategoryRequest;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;

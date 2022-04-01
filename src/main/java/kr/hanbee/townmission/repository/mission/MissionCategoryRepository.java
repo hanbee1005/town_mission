@@ -1,4 +1,4 @@
-package kr.hanbee.townmission.repository;
+package kr.hanbee.townmission.repository.mission;
 
 import kr.hanbee.townmission.domain.MissionCategory;
 import org.springframework.data.jpa.repository.JpaRepository;

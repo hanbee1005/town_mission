@@ -1,4 +1,4 @@
-package kr.hanbee.townmission.dto;
+package kr.hanbee.townmission.dto.mission;
 
 import kr.hanbee.townmission.constant.*;
 import lombok.Builder;

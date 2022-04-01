@@ -5,28 +5,21 @@ import kr.hanbee.townmission.constant.SettlementType;
 import kr.hanbee.townmission.constant.StatusType;
 import kr.hanbee.townmission.constant.YesOrNoType;
 import kr.hanbee.townmission.domain.Mission;
-import kr.hanbee.townmission.dto.MissionCreateRequest;
-import org.aspectj.apache.bcel.util.Repository;
+import kr.hanbee.townmission.dto.mission.MissionCreateRequest;
+import kr.hanbee.townmission.repository.mission.MissionRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.FilterType;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.test.annotation.Commit;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
@@ -34,7 +27,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @EnableJpaRepositories(basePackages = {"kr.hanbee.townmission.*"})
 @EntityScan("kr.hanbee.townmission.*")
 class MissionRepositoryTest {
-    @Autowired MissionRepository missionRepository;
+    @Autowired
+    MissionRepository missionRepository;
 
     @Test
     @DisplayName("미션 등록하기")

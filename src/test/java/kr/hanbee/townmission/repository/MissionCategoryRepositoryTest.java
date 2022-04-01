@@ -1,14 +1,15 @@
 package kr.hanbee.townmission.repository;
 
 import kr.hanbee.townmission.config.DataSourceConfig;
-import kr.hanbee.townmission.constant.MissionParentCategoryType;
 import kr.hanbee.townmission.constant.SettlementType;
 import kr.hanbee.townmission.constant.StatusType;
 import kr.hanbee.townmission.constant.YesOrNoType;
 import kr.hanbee.townmission.domain.Mission;
 import kr.hanbee.townmission.domain.MissionCategory;
-import kr.hanbee.townmission.dto.MissionCategoryRequest;
-import kr.hanbee.townmission.dto.MissionCreateRequest;
+import kr.hanbee.townmission.dto.mission.MissionCategoryRequest;
+import kr.hanbee.townmission.dto.mission.MissionCreateRequest;
+import kr.hanbee.townmission.repository.mission.MissionCategoryRepository;
+import kr.hanbee.townmission.repository.mission.MissionRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,6 @@ import java.util.List;
 import static kr.hanbee.townmission.constant.MissionCategoryType.*;
 import static kr.hanbee.townmission.constant.MissionParentCategoryType.*;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
@@ -34,8 +34,10 @@ import static org.junit.jupiter.api.Assertions.*;
 @EnableJpaRepositories(basePackages = {"kr.hanbee.townmission.*"})
 @EntityScan("kr.hanbee.townmission.*")
 class MissionCategoryRepositoryTest {
-    @Autowired MissionRepository repository;
-    @Autowired MissionCategoryRepository categoryRepository;
+    @Autowired
+    MissionRepository repository;
+    @Autowired
+    MissionCategoryRepository categoryRepository;
 
     @Test
     @DisplayName("미션 카테고리 등록")
