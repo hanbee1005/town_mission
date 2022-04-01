@@ -1,12 +1,11 @@
 package kr.hanbee.townmission.dto;
 
-import kr.hanbee.townmission.constant.SettlementType;
-import kr.hanbee.townmission.constant.StatusType;
-import kr.hanbee.townmission.constant.YesOrNoType;
+import kr.hanbee.townmission.constant.*;
 import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Builder
@@ -22,6 +21,7 @@ public class MissionCreateRequest {
     private String description;
 
     // about category
+    private List<MissionCategoryRequest> categories;
 
     // about address
 

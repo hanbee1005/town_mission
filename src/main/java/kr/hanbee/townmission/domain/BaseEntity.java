@@ -19,7 +19,7 @@ public abstract class BaseEntity {
 
     @CreatedDate
     @Column(updatable = false)
-    private LocalDateTime createdAt;
+    private LocalDateTime createdAt = LocalDateTime.now();
 
     @LastModifiedDate
     private LocalDateTime lastModifiedAt;
@@ -27,10 +27,10 @@ public abstract class BaseEntity {
     // TODO: 실제 사용자가 들어갈 수 있도록 추가 기능 구현 필요
     @CreatedBy
     @Column(updatable = false)
-    private String creator;
+    private Integer creator = -1;
 
     // TODO: 실제 사용자가 들어갈 수 있도록 추가 기능 구현 필요
     @LastModifiedBy
-    private String lastModifier;
+    private Integer lastModifier;
 
 }
